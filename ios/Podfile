@@ -5,6 +5,8 @@ platform :ios, '11.0'
 
 target 'mkmk' do
   config = use_native_modules!
+  
+  pod 'AgoraRtcEngine_iOS', '3.5.2'
 
   use_react_native!(
     :path => config[:reactNativePath],
