@@ -13,3 +13,4 @@
 
 #import "RtcEnginePlugin.h"
 #import "AgoraRtcEngineKit.h"
+#import "AGVideoPreProcessing.h"

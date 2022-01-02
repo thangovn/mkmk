@@ -6,10 +6,8 @@ class RtcSurfaceView: UIView {
     private var surface: UIView
     private var canvas: AgoraRtcVideoCanvas
     private weak var channel: AgoraRtcChannel?
-
+ 
     override init(frame: CGRect) {
-        let key = "eacfb2ab6dab424ca50cdbae1d62d968"
-        TiSDK.shareInstance().initSDK(key, with: nil)
         surface = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: frame.size))
         canvas = AgoraRtcVideoCanvas()
         canvas.view = surface
@@ -60,6 +58,8 @@ class RtcSurfaceView: UIView {
         }
         surface = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: bounds.size))
         addSubview(surface)
+        TiUIManager.share().load(toWindowDelegate: nil)
+        addSubview(TiUIManager.share().defaultButton)
         canvas.view = surface
         if canvas.uid == 0 {
             engine.setupLocalVideo(canvas)

@@ -32,6 +32,8 @@ protocol RtcEngineInterface:
         RtcEngineCameraInterface,
         RtcEngineStreamMessageInterface {
     func create(_ params: NSDictionary, _ callback: Callback)
+  
+    func initTiSDK(_ callback: Callback)
 
     func destroy(_ callback: Callback)
 
@@ -400,6 +402,11 @@ protocol RtcEngineStreamMessageInterface {
     func sendStreamMessage(_ params: NSDictionary, _ callback: Callback)
 }
 
+protocol LiveVCDataSource: NSObjectProtocol {
+    func liveVCNeedAgoraKit() -> AgoraRtcEngineKit
+    func liveVCNeedSettings() -> Settings
+}
+
 internal class AgoraRtcEngineKitFactory {
   func create(_ params: NSDictionary, _ delegate: RtcEngineEventHandler) -> AgoraRtcEngineKit? {
     let engine = AgoraRtcEngineKit.sharedEngine(
@@ -432,6 +439,12 @@ class RtcEngineManager: NSObject, RtcEngineInterface {
         delegate = nil
         mediaObserver = nil
     }
+  
+  weak var dataSource: LiveVCDataSource?
+  
+  private var agoraKit: AgoraRtcEngineKit {
+      return dataSource!.liveVCNeedAgoraKit()
+  }
 
     @objc func create(_ params: NSDictionary, _ callback: Callback) {
         delegate = RtcEngineEventHandler { [weak self] in
@@ -442,6 +455,12 @@ class RtcEngineManager: NSObject, RtcEngineInterface {
             RtcEngineRegistry.shared.onRtcEngineCreated(self.engine)
             return $0
         }
+    }
+  
+    @objc func initTiSDK(_ callback: Callback) {
+      let key = "eacfb2ab6dab424ca50cdbae1d62d968"
+      TiSDK.shareInstance().initSDK(key, with: nil)
+      AGVideoPreProcessing.registerVideoPreprocessing(self.engine)
     }
 
     @objc func destroy(_ callback: Callback) {

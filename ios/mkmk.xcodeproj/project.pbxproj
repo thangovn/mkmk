@@ -978,7 +978,6 @@
 		1095E111277EE9B900725DFC /* TiSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1095DD44277EE9AB00725DFC /* TiSDK.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1095E112277EE9BB00725DFC /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1095D96F277EE9A900725DFC /* ZipArchive.framework */; platformFilter = ios; };
 		1095E113277EE9BB00725DFC /* ZipArchive.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1095D96F277EE9A900725DFC /* ZipArchive.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1095E116277EE9E100725DFC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095E115277EE9E100725DFC /* File.swift */; };
 		1095E118277EEC0800725DFC /* RtcSurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095E117277EEC0800725DFC /* RtcSurfaceView.swift */; };
 		1095E11A277EEEF500725DFC /* RCTAgoraRtcSurfaceViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095E119277EEEF500725DFC /* RCTAgoraRtcSurfaceViewManager.swift */; };
 		1095E11C277EEF2000725DFC /* RCTAgoraRtcSurfaceViewManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1095E11B277EEF2000725DFC /* RCTAgoraRtcSurfaceViewManagerBridge.m */; };
@@ -994,6 +993,11 @@
 		1095E131277EF2BD00725DFC /* RtcEngineRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095E130277EF2BD00725DFC /* RtcEngineRegistry.swift */; };
 		1095E133277EF2DB00725DFC /* RtcChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095E132277EF2DA00725DFC /* RtcChannel.swift */; };
 		1095E135277EF2FA00725DFC /* RtcChannelEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095E134277EF2FA00725DFC /* RtcChannelEvent.swift */; };
+		1095E138277EF8FD00725DFC /* RCTAgoraRtcChannelModuleBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1095E137277EF8FA00725DFC /* RCTAgoraRtcChannelModuleBridge.m */; };
+		1095E13A277EF92900725DFC /* RCTAgoraRtcEngineModuleBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1095E139277EF92900725DFC /* RCTAgoraRtcEngineModuleBridge.m */; };
+		1095E13D277EFCD300725DFC /* AGVideoPreProcessing.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1095E13C277EFCD300725DFC /* AGVideoPreProcessing.mm */; };
+		1095E13F277EFE0F00725DFC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095E13E277EFE0F00725DFC /* Settings.swift */; };
+		1095E141277EFE3400725DFC /* AgoraExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095E140277EFE3400725DFC /* AgoraExtension.swift */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -2023,7 +2027,6 @@
 		1095DD44277EE9AB00725DFC /* TiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TiSDK.framework; sourceTree = "<group>"; };
 		1095DD45277EE9AB00725DFC /* TiSDKResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TiSDKResource.bundle; sourceTree = "<group>"; };
 		1095E114277EE9E100725DFC /* mkmk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mkmk-Bridging-Header.h"; sourceTree = "<group>"; };
-		1095E115277EE9E100725DFC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		1095E117277EEC0800725DFC /* RtcSurfaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RtcSurfaceView.swift; sourceTree = "<group>"; };
 		1095E119277EEEF500725DFC /* RCTAgoraRtcSurfaceViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTAgoraRtcSurfaceViewManager.swift; sourceTree = "<group>"; };
 		1095E11B277EEF2000725DFC /* RCTAgoraRtcSurfaceViewManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTAgoraRtcSurfaceViewManagerBridge.m; sourceTree = "<group>"; };
@@ -2041,6 +2044,12 @@
 		1095E132277EF2DA00725DFC /* RtcChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RtcChannel.swift; sourceTree = "<group>"; };
 		1095E134277EF2FA00725DFC /* RtcChannelEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RtcChannelEvent.swift; sourceTree = "<group>"; };
 		1095E136277EF39700725DFC /* RtcEnginePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtcEnginePlugin.h; sourceTree = "<group>"; };
+		1095E137277EF8FA00725DFC /* RCTAgoraRtcChannelModuleBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTAgoraRtcChannelModuleBridge.m; sourceTree = "<group>"; };
+		1095E139277EF92900725DFC /* RCTAgoraRtcEngineModuleBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTAgoraRtcEngineModuleBridge.m; sourceTree = "<group>"; };
+		1095E13B277EFCCB00725DFC /* AGVideoPreProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGVideoPreProcessing.h; sourceTree = "<group>"; };
+		1095E13C277EFCD300725DFC /* AGVideoPreProcessing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AGVideoPreProcessing.mm; sourceTree = "<group>"; };
+		1095E13E277EFE0F00725DFC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		1095E140277EFE3400725DFC /* AgoraExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgoraExtension.swift; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* mkmk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mkmk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = mkmk/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = mkmk/AppDelegate.m; sourceTree = "<group>"; };
@@ -3368,11 +3377,17 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				1095E13B277EFCCB00725DFC /* AGVideoPreProcessing.h */,
+				1095E13C277EFCD300725DFC /* AGVideoPreProcessing.mm */,
 				1095E11B277EEF2000725DFC /* RCTAgoraRtcSurfaceViewManagerBridge.m */,
+				1095E139277EF92900725DFC /* RCTAgoraRtcEngineModuleBridge.m */,
+				1095E137277EF8FA00725DFC /* RCTAgoraRtcChannelModuleBridge.m */,
 				1095E11D277EF05D00725DFC /* RCTAgoraRtcEngineModule.swift */,
 				1095E12F277EF2AA00725DFC /* AgoraRtcEngineKit.h */,
 				1095E132277EF2DA00725DFC /* RtcChannel.swift */,
 				1095E134277EF2FA00725DFC /* RtcChannelEvent.swift */,
+				1095E140277EFE3400725DFC /* AgoraExtension.swift */,
+				1095E13E277EFE0F00725DFC /* Settings.swift */,
 				1095E119277EEEF500725DFC /* RCTAgoraRtcSurfaceViewManager.swift */,
 				1095E130277EF2BD00725DFC /* RtcEngineRegistry.swift */,
 				1095E12B277EF1D400725DFC /* PromiseCallback.swift */,
@@ -3385,7 +3400,6 @@
 				1095E117277EEC0800725DFC /* RtcSurfaceView.swift */,
 				1095E125277EF10B00725DFC /* BeanCovertor.swift */,
 				1095E11F277EF09200725DFC /* RtcEngine.swift */,
-				1095E115277EE9E100725DFC /* File.swift */,
 				1095E114277EE9E100725DFC /* mkmk-Bridging-Header.h */,
 			);
 			name = mkmk;
@@ -4648,7 +4662,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1095E116277EE9E100725DFC /* File.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				1095DD58277EE9AB00725DFC /* TiUISliderNew.m in Sources */,
 				1095DD5A277EE9AB00725DFC /* TiSDKResourceManager.m in Sources */,
@@ -4662,6 +4675,7 @@
 				1095DD54277EE9AB00725DFC /* TiUIManager.m in Sources */,
 				1095E131277EF2BD00725DFC /* RtcEngineRegistry.swift in Sources */,
 				1095DD53277EE9AB00725DFC /* TiUIMakeUpView.m in Sources */,
+				1095E138277EF8FD00725DFC /* RCTAgoraRtcChannelModuleBridge.m in Sources */,
 				1095DD49277EE9AB00725DFC /* TiUISubMenuTwoViewCell.m in Sources */,
 				1095E12E277EF20D00725DFC /* Extensions.swift in Sources */,
 				1095DD59277EE9AB00725DFC /* TiMenuPlistManager.m in Sources */,
@@ -4670,10 +4684,12 @@
 				1095DD51277EE9AB00725DFC /* TiUISliderRelatedView.m in Sources */,
 				1095E12A277EF1AB00725DFC /* RCTAgoraRtcChannelModule.swift in Sources */,
 				1095E124277EF0F800725DFC /* RtcEngineEvent.swift in Sources */,
+				1095E141277EFE3400725DFC /* AgoraExtension.swift in Sources */,
 				1095E122277EF0AC00725DFC /* Callback.swift in Sources */,
 				1095E133277EF2DB00725DFC /* RtcChannel.swift in Sources */,
 				1095DD4F277EE9AB00725DFC /* TiUIMakeUpViewCell.m in Sources */,
 				1095DD4D277EE9AB00725DFC /* TiUIMenuTwoViewCell.m in Sources */,
+				1095E13A277EF92900725DFC /* RCTAgoraRtcEngineModuleBridge.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				1095E11E277EF05D00725DFC /* RCTAgoraRtcEngineModule.swift in Sources */,
 				1095DD4A277EE9AB00725DFC /* TiUISubMenuThreeViewCell.m in Sources */,
@@ -4688,6 +4704,8 @@
 				1095DD50277EE9AB00725DFC /* TiUIDefaultButtonView.m in Sources */,
 				1095DD5D277EE9AB00725DFC /* TiUITool.m in Sources */,
 				1095DD47277EE9AB00725DFC /* TiUIGreenScreensView.m in Sources */,
+				1095E13F277EFE0F00725DFC /* Settings.swift in Sources */,
+				1095E13D277EFCD300725DFC /* AGVideoPreProcessing.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4779,7 +4797,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvn.host;
 				PRODUCT_NAME = mkmk;
 				SWIFT_OBJC_BRIDGING_HEADER = "mkmk-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -4796,6 +4814,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KZ27F5FXC2;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TiSDK_iOS/TiUI/TiUITool/TiThird",
@@ -4811,7 +4830,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvn.host;
 				PRODUCT_NAME = mkmk;
 				SWIFT_OBJC_BRIDGING_HEADER = "mkmk-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
